@@ -1,3 +1,6 @@
+# author: Ruturajsinh Solanki
+
+# importing necessary libraries and modules
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
@@ -9,12 +12,13 @@ y = data.price  # target column
 
 # features used for prediction
 features = ['sqfeet', 'beds', 'baths', 'comes_furnished']
-X = data[features]
+X = data[features]  # features/ columns used for prediction
 
-# creating our model
-rent_model = DecisionTreeRegressor(random_state=1)  # define
-rent_model.fit(X, y)
+# creating our model using DecisionTreeRegressor()
+rent_model = DecisionTreeRegressor(random_state=1)  # defining our model
+rent_model.fit(X, y)  # making model fit for prediction
+preds = rent_model.predict(X)  # predicting the values
 
-preds = rent_model.predict(X)
+# comparing predicted values and original values
 print("Predictions are: ", rent_model.predict(X.head()))
 print("Original values are: ", y.head().tolist())
