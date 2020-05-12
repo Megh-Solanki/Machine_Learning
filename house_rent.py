@@ -2,7 +2,7 @@
 
 # importing necessary libraries and modules
 import pandas as pd
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 
 # importing data file for our model
 path = r'D:\iNeuron ML Challenge\Bundle_2\houseRent\housing_train.csv'
@@ -14,8 +14,8 @@ y = data.price  # target column
 features = ['sqfeet', 'beds', 'baths', 'comes_furnished']
 X = data[features]  # features/ columns used for prediction
 
-# creating our model using DecisionTreeRegressor()
-rent_model = DecisionTreeRegressor(random_state=1)  # defining our model
+# creating our model using RandomForestRegressor()
+rent_model = RandomForestRegressor(random_state=1)  # defining our model
 rent_model.fit(X, y)  # making model fit for prediction
 preds = rent_model.predict(X)  # predicting the values
 
