@@ -1,4 +1,4 @@
-# author: Ruturajsinh Solanki
+# author: Meghrajsinh Solanki
 
 # importing necessary libraries and modules
 import pandas as pd
