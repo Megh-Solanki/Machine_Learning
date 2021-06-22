@@ -1,4 +1,4 @@
-# author: Ruturajsinh Solanki
+# author: Meghrajsinh Solanki
 
 # importing necessary libraries and modules
 import pandas as pd
@@ -43,7 +43,7 @@ X = data[features]  # features/ columns used for prediction
 # splitting data into training data and validation data
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
 
-# creating our model using RandomForestRegressor()
+# creating our model using DecisionTreeRegressor()
 rent_model = DecisionTreeRegressor(random_state=1)  # defining our model
 rent_model.fit(train_X, train_y)  # making model fit for prediction
 
